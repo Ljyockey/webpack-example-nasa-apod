@@ -1,0 +1,15 @@
+{
+  "name": "webpack-example-nasa-apod",
+  "version": "1.0.0",
+  "description": "**ABOUT**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4"
+  }
+}
