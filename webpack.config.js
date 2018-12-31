@@ -2,8 +2,8 @@
 
 module.exports = {
   module: {
-    loaders: [
-      { exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/ },
+    rules: [
+      { exclude: ['node_modules'], use: {loader: 'babel-loader'}, test: /\.jsx?$/ },
       { loader: 'style-loader!css-loader', test: /\.css$/ },
       { loader: 'url-loader', test: /\.gif$/ },
       { loader: 'file-loader', test: /\.(ttf|eot|svg)$/ },
@@ -14,9 +14,7 @@ module.exports = {
       'react': 'preact-compat',
       'react-dom': 'preact-compat'
     },
-    extensions: ['', 'js', 'jsx'],
-    modules: [
-      'node_modules'
-    ],
+    extensions: ['.js', '.jsx']
   },
+  entry: './src/index.js'
 };
