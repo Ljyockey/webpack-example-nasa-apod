@@ -11,15 +11,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      config$: './configs/app-config.js',
-      react: './vendor/react-master',
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat'
     },
     extensions: ['', 'js', 'jsx'],
     modules: [
-      'node_modules',
-      'bower_components',
-      'shared',
-      '/shared/vendor/modules',
+      'node_modules'
     ],
   },
 };
