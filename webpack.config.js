@@ -1,23 +1,20 @@
 'use strict';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
     rules: [
-      { exclude: ['node_modules'], use: {loader: 'babel-loader'}, test: /\.jsx?$/ },
-      { loader: 'style-loader!css-loader', test: /\.css$/ },
-      { loader: 'url-loader', test: /\.gif$/ },
-      { loader: 'file-loader', test: /\.(ttf|eot|svg)$/ },
+      { exclude: ['node_modules'], use: {loader: 'babel-loader'}, test: /\.jsx?$/ }
     ],
   },
   resolve: {
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat'
-    },
     extensions: ['.js', '.jsx']
   },
   entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-  }
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: 'index.html'
+    })
+  ]
 };
