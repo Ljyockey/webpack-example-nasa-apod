@@ -1,5 +1,4 @@
 'use strict';
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
@@ -19,10 +18,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.scss']
   },
   entry: './src/index.js',
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: 'index.html'
-    })
-  ]
+  output: {
+    filename: 'dist/javascript/[name].js'
+  }
 };
