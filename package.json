@@ -46,18 +46,6 @@
       "src/"
     ],
     "moduleNameMapper": {
-      "^react$": "preact-compat",
-      "^react-native$": "react-native-web",
-      "^react-dom/server$": "<rootDir>/node_modules/preact-render-to-string/dist/index.js",
-      "^react-dom/test-util$": "<rootDir>/node_modules/preact-test-utils/lib/index.js",
-      "^react-test-renderer/shallow$": "<rootDir>/node_modules/preact-test-utils/lib/index.js",
-      "^react-test-renderer$": "<rootDir>/node_modules/preact-test-utils/lib/index.js",
-      "^react-addons-test-utils$": "<rootDir>/node_modules/preact-test-utils/lib/index.js",
-      "^smartstream-widgets[/](.+)": "<rootDir>/widgets/src/main/javascript/$1",
-      "^mock-data[/](.+)": "<rootDir>/mock-data/$1",
-      "^styles[/](.+)": "<rootDir>/widgets/src/main/resources/styles/$1",
-      "^images[/](.+)": "<rootDir>/widgets/src/main/resources/images/$1",
-      "^resources[/](.+)": "<rootDir>/widgets/src/main/resources/$1"
-    }
+      "\\.(css|scss)$": "<rootDir>/test/utils/cssTransform.js"}
   }
 }

@@ -2,7 +2,7 @@
 import {h, Component, render} from  'preact'
 import Hello from './components/hello'
 
-import './styles/main'
+import './styles/main.scss'
 
 export class App extends Component {
     render () {
