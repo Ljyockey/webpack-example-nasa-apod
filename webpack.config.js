@@ -1,10 +1,12 @@
 'use strict';
 
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   module: {
     rules: [
       { exclude: ['node_modules'], use: {loader: 'babel-loader'}, test: /\.jsx?$/ },
-      {test: /\.s(s|c)ss$/, use: [{
+      {test: /\.scss$/, use: [{
         loader: 'style-loader'
       }, {
         loader: 'css-loader'
@@ -20,5 +22,10 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'dist/javascript/[name].js'
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
+  ]
 };

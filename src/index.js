@@ -1,6 +1,6 @@
 /** @jsx h */
 import {h, Component, render} from  'preact'
-import Hello from './components/hello'
+import Hello from './components/Hello'
 
 import './styles/main.scss'
 
