@@ -6,13 +6,13 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest"
+    "test": "jest ./test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
+    "@babel/cli": "7.1.2",
     "@babel/core": "7.1.2",
     "@babel/preset-env": "7.1.0",
     "@babel/preset-react": "7.0.0",
@@ -46,6 +46,7 @@
       "src/"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>/test/utils/cssTransform.js"}
+      "\\.(css|scss)$": "<rootDir>/test/utils/cssTransform.js"
+    }
   }
 }
