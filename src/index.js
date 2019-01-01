@@ -1,11 +1,14 @@
 /** @jsx h */
 import {h, Component, render} from  'preact'
+import Hello from './components/hello'
+
+import './styles/main'
 
 export class App extends Component {
     render () {
         return (
             <div class='app-placeholder'>
-                Hello, world!
+                <Hello subject={'world'} />
             </div> 
         )
     }
