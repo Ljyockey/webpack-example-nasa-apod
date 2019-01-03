@@ -13,6 +13,6 @@ export class App extends Component {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const rootElement = document.querySelector('#pb-app')
+    const rootElement = document.querySelector('#webpack-example-nasa-apod-app')
     render(<App />, rootElement)
 })
