@@ -5,6 +5,7 @@ import Paragraph from '../../src/controls/Paragraph'
 const MOCK_TEXT = 'foo'
 const COMMON_CLASSNAME = 'apod-paragraph'
 const BASE_CLASSNAME = 'apod-paragraph__'
+const CUSTOM_CLASSNAME = 'foo-class'
 
 describe('Paragraph test', () => {
     test('should render', () => {
@@ -34,6 +35,19 @@ describe('Paragraph test', () => {
             const context = shallow(<Paragraph />)
             expect(context).toBeDefined()
             expect(context.find(`.${COMMON_CLASSNAME}`).length).toBe(0)
+        })
+    })
+
+    describe('Paragraph - custom classname', () => {
+        test('should render custom classname when it is passed', () => {
+            const context = shallow(<Paragraph text={MOCK_TEXT} className={CUSTOM_CLASSNAME} />)
+            expect(context.find(`.${CUSTOM_CLASSNAME}`).length).toBe(1)
+        })
+
+        test('should not render custom classname when it is not passed', () => {
+            const context = shallow(<Paragraph text={MOCK_TEXT} />)
+            expect(context).toBeDefined()
+            expect(context.find(`.${CUSTOM_CLASSNAME}`).length).toBe(0)
         })
     })
 })
